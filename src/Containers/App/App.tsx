@@ -7,13 +7,26 @@ import './App.css';
 
 function App() {
   const [epg, setEpg] = useState<EPGType | null>(null);
+  const [error, setError] = useState<Error | null>(null);
+
+  const requestEpg = () => {
+    setEpg(null);
+    setError(null);
+    getEpg().then(setEpg, setError);
+  }
+
   useEffect(() => {
-    getEpg().then(setEpg);
+    requestEpg();
   }, []);
+  
   return (
     <Layout>
-      {epg === null && <div>LOADING</div>}
+      {(epg === null && error === null) && <div>LOADING</div>}
       {epg && <EPG data={epg} />}
+      {error && <div>
+        <div>{error.message}</div>
+        <button onClick={requestEpg}>Retry</button>
+      </div>}
     </Layout>
   );
 }
