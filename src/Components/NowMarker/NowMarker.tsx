@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  getMinutesFromMidnight,
+  getDistanceFromMidnight,
 } from '../../Modules/SpaceTime';
 import './NowMarker.css';
 
@@ -9,7 +9,7 @@ function NowMarker() {
     <div
       className="now-marker"
       style={{
-        left: `${(getMinutesFromMidnight() * 0.6) + 5}rem`,
+        left: `${getDistanceFromMidnight()}rem`,
       }}
     >
       <div className="now-marker-top"></div>

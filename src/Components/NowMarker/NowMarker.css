@@ -10,4 +10,5 @@ div.now-marker {
   border-left: 2px solid var(--accent);
   height: 100%;
   position: absolute;
+  margin-left: var(--side-size);
 }

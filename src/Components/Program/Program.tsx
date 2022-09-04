@@ -2,9 +2,8 @@ import React from 'react';
 import type { Program as ProgramType } from '../../Modules/Api';
 import {
   parseTime,
-  getMinutesToMidnight,
-  programDurationInSec,
-  convertDurationToWidth,
+  getDistanceToMidnight,
+  getProgramWidthByDuration,
   isNow,
 } from '../../Modules/SpaceTime';
 import './Program.css';
@@ -16,7 +15,7 @@ interface Props {
 
 function Program(props: Props) {
   const program = props.program;
-  const minWidth = convertDurationToWidth(programDurationInSec(program.start, program.end));
+  const minWidth = getProgramWidthByDuration(program.start, program.end);
   return (
     <>
       <div
@@ -35,7 +34,7 @@ function Program(props: Props) {
             key={`${program.id}-padding`}
             className="program stripes"
             style={{
-              minWidth: `${(getMinutesToMidnight(program.end) * 0.6)}rem`,
+              minWidth: `${getDistanceToMidnight(program.end)}rem`,
             }}
           ></div>
         )

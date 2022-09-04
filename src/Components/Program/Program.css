@@ -20,3 +20,9 @@ div.stripes {
 div.now {
   background-color: var(--grey2);
 }
+
+@media screen and (max-width: 60rem) {
+  div.program {
+    font-size: 0.9rem;
+  }
+}
