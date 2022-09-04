@@ -27,7 +27,7 @@ function Program(props: Props) {
         }}
       >
         <div><strong>{program.title}</strong></div>
-        <div>{parseTime(program.start, program.end)}</div>
+        <div className="light-grey">{parseTime(program.start, program.end)}</div>
       </div>
       {
         props.isLast && (

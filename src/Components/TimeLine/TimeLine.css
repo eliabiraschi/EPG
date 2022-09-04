@@ -1,5 +1,5 @@
 div.time-line {
-  height: 2rem;
+  height: 2.5rem;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -27,8 +27,8 @@ div.hour-text {
 
 div.half-border-left {
   position: absolute;
-  top: 75%;
+  top: 65%;
   left: -2px;
   bottom: 0;
-  border-left: 2px solid #494949;
+  border-left: 2px solid var(--grey);
 }

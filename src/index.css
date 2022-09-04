@@ -1,12 +1,45 @@
+:root {
+  --dark-grey: #202020;
+  --white: #FFF;
+  --black: #000;
+  --black2: #111111;
+  --grey: #494949;
+  --grey2: #393939;
+  --light-grey: #9b9b9b;
+  --accent: #e1a21e;
+  --side-size: 4rem;
+  --header-height: 4rem;
+  --footer-height: 4rem;
+  --main-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+@media screen and (min-width: 60rem) {
+  :root {
+    --side-size: 5rem;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 html, body {
-  background-color: #202020;
-  color: #FFF;
+  background-color: var(--dark-grey);
+  color: var(--white);
 }
 
 body {
   margin: 0;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.grey {
+  color: var(--grey);
+}
+
+.light-grey {
+  color: var(--light-grey);
 }

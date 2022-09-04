@@ -14,7 +14,7 @@ function Calendar(props: Props) {
   useEffect(() => {
     const topElement = document.getElementById('top');
     if (topElement) {
-      topElement.scrollLeft = Math.round(topElement.offsetWidth / 2);
+      topElement.scrollLeft = Math.round(topElement.offsetWidth / 1.3);
     }
   }, []);
 

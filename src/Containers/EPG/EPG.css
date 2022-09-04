@@ -1,5 +1,5 @@
 div.programs-list {
-  height: calc(100vh - 8rem - 5rem);
+  height: calc(var(--main-height) - var(--side-size));
   overflow-y: scroll;
   position: relative;
   overflow-x: hidden;
@@ -13,9 +13,10 @@ div.programs-of-the-day {
 }
 
 div.all-programs {
-  padding-left: 5rem;
+  padding-left: var(--side-size);
   overflow-x: scroll;
   position: absolute;
   top: 0;
   width: 100vw;
+  overflow-y: clip;
 }

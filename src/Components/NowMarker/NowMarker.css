@@ -1,13 +1,13 @@
 div.now-marker-top {
-  border: 4px solid #e1a21e;
+  border: 4px solid var(--accent);
   border-radius: 2px;
-  height: 2rem;
+  height: 2.5rem;
   position: absolute;
   left: -5px;
 }
 
 div.now-marker {
-  border-left: 2px solid #e1a21e;
+  border-left: 2px solid var(--accent);
   height: 100%;
   position: absolute;
 }

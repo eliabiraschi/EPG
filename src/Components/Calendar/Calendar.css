@@ -1,22 +1,23 @@
 div.top {
-  height: 5rem;
+  height: var(--side-size);
   width: 100vw;
-  overflow: scroll;
-  border-bottom: 1px solid #494949;
+  overflow-x: scroll;
+  border-bottom: 1px solid var(--grey);
+  overflow-y: clip;
 }
 
 div.star-wrapper {
   display: inline-block;
-  background: #202020;
+  background: var(--dark-grey);
   position: absolute;
-  width: 5rem;
+  width: var(--side-size);
   height: inherit;
   display: flex;
   align-content: center;
   justify-content: center;
   align-items: center;
   box-shadow: 5px 0px 10px black;
-  border-bottom: 2px solid #494949;
+  border-bottom: 1px solid var(--grey);
 }
 
 .star-icon {
@@ -28,7 +29,8 @@ div.calendar {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 200vw;
+  width: 100%;
+  min-width: 60rem;
   padding-left: 6rem;
   padding-right: 2rem;
   height: inherit;
@@ -43,5 +45,5 @@ div.day {
 }
 
 div.today {
-  color: #FFF;
+  color: var(--white);
 }

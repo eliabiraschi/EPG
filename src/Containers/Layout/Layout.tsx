@@ -30,7 +30,7 @@ function Layout(props: Props) {
 		<footer>
 			<FontAwesomeIcon icon={faHouse} size="2x" />
 			<FontAwesomeIcon icon={faTv} size="2x" />
-			<FontAwesomeIcon icon={faList} size="2x" />
+			<FontAwesomeIcon icon={faList} size="2x" className="accent" />
 			<FontAwesomeIcon icon={faArrowRotateLeft} size="2x" />
 			<FontAwesomeIcon icon={faBookOpenReader} size="2x" />
 		</footer>
