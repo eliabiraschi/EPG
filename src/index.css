@@ -8,14 +8,15 @@
   --light-grey: #9b9b9b;
   --accent: #e1a21e;
   --side-size: 4rem;
-  --header-height: 4rem;
-  --footer-height: 4rem;
+  --header-height: 3rem;
+  --footer-height: var(--header-height);
   --main-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
 @media screen and (min-width: 60rem) {
   :root {
     --side-size: 5rem;
+    --header-height: 4rem;
   }
 }
 
@@ -42,4 +43,8 @@ body {
 
 .light-grey {
   color: var(--light-grey);
+}
+
+.fa-2x {
+  font-size: calc(var(--header-height) / 2) !important;
 }
