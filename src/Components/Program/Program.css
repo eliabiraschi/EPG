@@ -1,0 +1,21 @@
+div.program {
+  height: 5rem;
+  padding: .5rem;
+  border-right: 2px solid #494949;
+  border-bottom: 1px solid #494949;
+  border-top: 1px solid #494949;
+}
+
+div.stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #494949,
+    #494949 10px,
+    #202020 10px,
+    #202020 20px
+  );
+}
+
+div.now {
+  background-color: #393939;
+}

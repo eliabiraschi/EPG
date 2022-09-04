@@ -1,11 +1,11 @@
-interface Program {
+export interface Program {
   title: string;
   id: string;
   start: string;
   end: string;
 }
 
-interface Channel {
+export interface Channel {
   id: string;
   title: string;
   images: {
