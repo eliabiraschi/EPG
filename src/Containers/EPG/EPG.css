@@ -19,4 +19,20 @@ div.all-programs {
   top: 0;
   width: 100vw;
   overflow-y: clip;
+  scroll-behavior: smooth;
+}
+
+button.jump-to-now {
+  position: fixed;
+  z-index: 11;
+  color: var(--white);
+  background-color: var(--accent);
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  right: 2rem;
+  bottom: calc(var(--footer-height) + 1.5rem);
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
