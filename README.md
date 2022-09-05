@@ -21,8 +21,8 @@ $ npm i
 **Backend**
 
 ```bash
-$ git clone https://github.com/NoriginMedia/mock-api.git
-$ cd mock-api
+$ git clone https://github.com/NoriginMedia/candidate-tester.git
+$ cd candidate-tester
 $ npm i
 ```
 
@@ -32,7 +32,7 @@ Run the backend first to make sure that the UI will be able to request the data 
 
 ```bash
 $ pwd
-mock-api
+candidate-tester
 $ npm start
 ```
 
