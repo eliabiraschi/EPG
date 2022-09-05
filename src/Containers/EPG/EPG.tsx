@@ -45,7 +45,7 @@ function EPG(props: Props) {
               )
             })
           }
-          <button onClick={jumpToNow} className="jump-to-now">NOW</button>
+          <button onClick={jumpToNow} className="accent-button jump-to-now">NOW</button>
         </div>
       </div>
     </div>

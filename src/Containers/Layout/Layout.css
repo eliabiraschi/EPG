@@ -18,6 +18,9 @@ img.logo {
 
 main {
   height: var(--main-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {

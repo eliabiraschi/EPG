@@ -21,11 +21,11 @@ function App() {
   
   return (
     <Layout>
-      {(epg === null && error === null) && <div>LOADING</div>}
+      {(epg === null && error === null) && <div className="loader">LOADING...</div>}
       {epg && <EPG data={epg} />}
-      {error && <div>
+      {error && <div className="error-box">
         <div>{error.message}</div>
-        <button onClick={requestEpg}>Retry</button>
+        <button className="accent-button" onClick={requestEpg}>Retry</button>
       </div>}
     </Layout>
   );

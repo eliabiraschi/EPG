@@ -1,0 +1,11 @@
+.error-box {
+  padding: 0rem 1rem;
+  color: var(--error);
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+}
+
+.error-box button {
+  margin-top: 1rem;
+}
