@@ -21,16 +21,17 @@ function Calendar(props: Props) {
   return (
     <div className="top" id="top">
       <div className="star-wrapper">
-        <FontAwesomeIcon icon={faStar} size="2x" className="star-icon" />
+        <FontAwesomeIcon icon={faStar} size="2x" className="light-grey" />
       </div>
       <div className="calendar">
         {
           props.range.map((offSet) => {
             const date = new Date();
             date.setDate(date.getDate() + offSet);
+            const weekday = date.toLocaleDateString('en-US', { weekday: 'short' });
             return (
-              <div className={`day${offSet === 0 ? ' today' : ''}`}>
-                <div className="weekday">{date.toLocaleDateString('en-US', { weekday: 'short' })}</div>
+              <div key={weekday} className={`day${offSet === 0 ? ' today' : ' light-grey'}`}>
+                <div className="weekday">{weekday}</div>
                 <div className="date">{`${date.getDate()}.${date.getMonth() + 1}.`}</div>
               </div>
             )

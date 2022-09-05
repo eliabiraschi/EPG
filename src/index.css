@@ -46,5 +46,6 @@ body {
 }
 
 .fa-2x {
+  cursor: pointer;
   font-size: calc(var(--header-height) / 2) !important;
 }

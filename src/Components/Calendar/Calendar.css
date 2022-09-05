@@ -20,10 +20,6 @@ div.star-wrapper {
   border-bottom: 1px solid var(--grey);
 }
 
-.star-icon {
-  color: #9b9b9b;
-}
-
 div.calendar {
   display: flex;
   flex-direction: row;
@@ -41,7 +37,7 @@ div.day {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #9b9b9b;
+  cursor: pointer;
 }
 
 div.today {
