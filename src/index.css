@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 60rem) {
   :root {
-    --side-size: 5rem;
+    --side-size: 6rem;
     --header-height: 4rem;
   }
 }

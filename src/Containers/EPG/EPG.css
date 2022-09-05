@@ -28,4 +28,12 @@ button.jump-to-now {
   right: 2rem;
   color: var(--white);
   bottom: calc(var(--footer-height) + 1.5rem);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 60rem) {
+  button.jump-to-now {
+    min-width: 5rem;
+    min-height: 3rem;
+  }
 }

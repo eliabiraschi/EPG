@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import {
   getDistanceFromMidnight,
-} from '../../Modules/SpaceTime';
+} from '../../Modules/TimeManipulation';
 import './NowMarker.css';
 
 function NowMarker() {
   const [refreshCount, setRefreshCount] = useState(0);
   setInterval(() => {
     setRefreshCount(refreshCount + 1);
-    console.log('Refreshed marker', refreshCount);
   }, 60 * 1000);
 
   return (

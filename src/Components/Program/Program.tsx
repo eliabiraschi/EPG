@@ -3,9 +3,9 @@ import type { Program as ProgramType } from '../../Modules/Api';
 import {
   parseTime,
   getDistanceToMidnight,
-  getProgramWidthByDuration,
+  getWidthByDuration,
   isNow,
-} from '../../Modules/SpaceTime';
+} from '../../Modules/TimeManipulation';
 import './Program.css';
 
 interface Props {
@@ -15,7 +15,7 @@ interface Props {
 
 function Program(props: Props) {
   const program = props.program;
-  const minWidth = getProgramWidthByDuration(program.start, program.end);
+  const minWidth = getWidthByDuration(program.start, program.end);
   return (
     <>
       <div

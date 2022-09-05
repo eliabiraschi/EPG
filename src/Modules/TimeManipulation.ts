@@ -1,5 +1,7 @@
 const MIN_REM_RATIO = 0.5;
 
+export const minutesToRem = (minutes: number): number => minutes * MIN_REM_RATIO;
+
 export const addLeadingZero = (input: number): string => {
   return ('0' + input).slice(-2);
 }
@@ -7,7 +9,9 @@ export const addLeadingZero = (input: number): string => {
 export const parseTime = (start: string, end: string): string => {
   const dateStart = new Date(start);
   const dateEnd = new Date(end);
-  return `${addLeadingZero(dateStart.getHours())}:${addLeadingZero(dateStart.getMinutes())} - ${addLeadingZero(dateEnd.getHours())}:${addLeadingZero(dateEnd.getMinutes())}`
+  const parsedStart = `${addLeadingZero(dateStart.getHours())}:${addLeadingZero(dateStart.getMinutes())}`;
+  const parsedEnd = `${addLeadingZero(dateEnd.getHours())}:${addLeadingZero(dateEnd.getMinutes())}`;
+  return `${parsedStart} - ${parsedEnd}`;
 };
 
 export const getMinutesToMidnight = (inputDate: string): number => {
@@ -15,18 +19,16 @@ export const getMinutesToMidnight = (inputDate: string): number => {
   return (24 * 60) - ((date.getHours() * 60) + date.getMinutes());
 }
 
-export const programDurationInMin = (start: string, end: string): number => {
+export const getDurationInMin = (start: string, end: string): number => {
   const dateStart = new Date(start);
   const dateEnd = new Date(end);
   return Math.round(dateEnd.getTime() - dateStart.getTime()) / (60 * 1000);
 };
 
-export const getProgramWidthByDuration = (start: string, end: string): number => {
-  const durationInMinutes = programDurationInMin(start, end);
-  return convertDurationToWidth(durationInMinutes);
+export const getWidthByDuration = (start: string, end: string): number => {
+  const durationInMinutes = getDurationInMin(start, end);
+  return minutesToRem(durationInMinutes);
 };
-
-export const convertDurationToWidth = (duration: number): number => duration * MIN_REM_RATIO;
 
 export const isNow = (start: string, end: string): boolean => {
   const dateStart = new Date(start);
@@ -42,9 +44,11 @@ export const getMinutesFromMidnight = (): number => {
 };
 
 export const getDistanceFromMidnight = (): number => {
-  return getMinutesFromMidnight() * MIN_REM_RATIO;
+  const minutesFromMidnight = getMinutesFromMidnight();
+  return minutesToRem(minutesFromMidnight);
 };
 
 export const getDistanceToMidnight = (inputDate: string): number => {
-  return getMinutesToMidnight(inputDate) * MIN_REM_RATIO;
+  const minutesToMidnight = getMinutesToMidnight(inputDate);
+  return minutesToRem(minutesToMidnight);
 };

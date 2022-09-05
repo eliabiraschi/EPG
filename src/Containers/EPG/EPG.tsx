@@ -7,7 +7,7 @@ import TimeLine from '../../Components/TimeLine/TimeLine';
 import Program from '../../Components/Program/Program';
 import {
   getDistanceFromMidnight,
-} from '../../Modules/SpaceTime';
+} from '../../Modules/TimeManipulation';
 import './EPG.css';
 
 interface Props {

@@ -1,8 +1,8 @@
 import React from 'react';
 import {
   addLeadingZero,
-  convertDurationToWidth,
-} from '../../Modules/SpaceTime';
+  minutesToRem,
+} from '../../Modules/TimeManipulation';
 import './TimeLine.css';
 
 const generateTimeLine = () => {
@@ -13,7 +13,7 @@ const generateTimeLine = () => {
     res.push(
       <div
         style={{
-          minWidth: isLast ? 'unset' : `${convertDurationToWidth(60)}rem`,
+          minWidth: isLast ? 'unset' : `${minutesToRem(60)}rem`,
         }}
         className={isLast ? 'hour-last' : 'hour'}
         key={time}
