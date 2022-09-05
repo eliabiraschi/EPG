@@ -13,8 +13,8 @@ Clone this repo and the backend into 2 separate folders and install the package
 **Frontend**
 
 ```bash
-$ git clone
-$ cd epg
+$ git clone git@github.com:eliabiraschi/EPG.git
+$ cd EPG
 $ npm i
 ```
 
@@ -40,11 +40,11 @@ In a different terminal, launch the UI in the same way
 
 ```bash
 $ pwd
-epg
+EPG
 $ npm start
 ```
 
-A new browser tab should be open pointing to the webapp.
+A new browser tab should be open pointing to the webapp. If it does not open automatically, you can find the app by visiting this addess http://localhost:3000/
 
 ## Testing
 
